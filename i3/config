@@ -30,6 +30,9 @@ floating_modifier $mod
 bindsym $mod+Return exec rofi-sensible-terminal
 bindcode 131 exec rofi-sensible-terminal
 
+#unminimize keepass
+bindsym $mod+p exec keepassxc
+
 # kill focused window
 bindsym $mod+q kill
 
