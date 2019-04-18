@@ -2,9 +2,10 @@
 
 set -e
 
-CONFIG=$(readlink -f $(dirname $0)/..)
+ROOT_DIR=$(readlink -f $(dirname $0)/..)
 PROGRAM="i3status"
+
 mkdir ~/.config 2>/dev/null || true
 cd ~/.config
 rm -rf $PROGRAM
-cp -r $CONFIG $PROGRAM
+ln -s $ROOT_DIR $PROGRAM

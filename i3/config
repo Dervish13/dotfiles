@@ -158,3 +158,9 @@ assign [class="Diligent"] 4
 bindcode 140 exec mixer -s vol 0% #mute
 bindcode 174 exec mixer -s vol -1%
 bindcode 176 exec mixer -s vol +1%
+
+#rotate right
+
+bindcode 204 exec xrandr --output LVDS1 --rotate right
+bindcode Shift+204 exec xrandr --output LVDS1 --rotate normal
+

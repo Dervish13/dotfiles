@@ -3,7 +3,7 @@
 set -e
 
 ROOT_DIR=$(readlink -f $(dirname $0)/..)
-PROGRAM="i3"
+PROGRAM="dunst"
 
 mkdir ~/.config 2>/dev/null || true
 cd ~/.config
