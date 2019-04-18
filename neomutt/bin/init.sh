@@ -11,5 +11,5 @@ cd ~/.config
 rm -rf $PROGRAM
 mkdir $PROGRAM
 cp "${ROOT_DIR}/neomuttrc" /usr/local/etc/neomuttrc
-ln "${ROOT_DIR}/account.gmail.rajko" $PROGRAM/account.gmail.rajko
-ln "${ROOT_DIR}/account.tilda.dervish" $PROGRAM/account.tilda.dervish
+cp "${ROOT_DIR}/account.gmail.rajko" ${PROGRAM}/account.gmail.rajko
+cp "${ROOT_DIR}/account.tilda.dervish" ${PROGRAM}/account.tilda.dervish
