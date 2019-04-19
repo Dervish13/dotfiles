@@ -103,13 +103,15 @@ attachments   -A message/external-body
 attachments   -I message/external-body
 
 bind index,pager <f4> sidebar-toggle-visible
-bind index,pager { sidebar-next
-bind index,pager } sidebar-prev
-bind index,pager + sidebar-open
+bind index,pager J sidebar-next
+bind index,pager K sidebar-prev
+bind index,pager E sidebar-open
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set sidebar_width = 60
 set mail_check_stats
-set folder="~/.Mail"
+
+set folder = '~/.Mail'
+set mbox_type = Maildir
 set editor = "nvim"
 #colors
 #color normal default default
@@ -132,11 +134,9 @@ macro index <F1> '<sync-mailbox><enter-command>source ~/.config/neomutt/account.
 set ssl_starttls = yes
 set ssl_force_tls = yes
 set imap_check_subscribed
-# set hostname = gmail.com
 set mail_check = 30
-set timeout = 300
+set timeout = 10
 set imap_keepalive = 300
-# set record = "+[GMail]/Sent Mail"
 set move = no
 set include
 set sort = 'threads'
@@ -151,6 +151,9 @@ auto_view text/html
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+folder-hook "~/.Mail/Tilda/*" source ~/.config/neomutt/account.tilda.dervish
 # }}}
 #-------- Color Theme {{{
 #------------------------------------------------------

@@ -1,8 +1,8 @@
 unmailboxes *
 set imap_user = "rajkodervisevic@gmail.com"
-set imap_pass = ""
+#set imap_pass = ""
 set smtp_url = "smtp://rajkodervisevic@smtp.gmail.com:587/"
-set smtp_pass = ""
+#set smtp_pass = $imap_pass
 set from = "rajkodervisevic@gmail.com"
 set realname = "Dervish"
 set folder = "imaps://imap.gmail.com:993"

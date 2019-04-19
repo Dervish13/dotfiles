@@ -21,8 +21,10 @@ xrdb ~/.Xdefaults
 
 # Apps
 urxvt -name weechat -e ~/bin/weechat.sh &
-#urxvt -name ssh-add -e ssh-add ~/.ssh/id_rsa &
+~/bin/mail.sh &
+offlineimap &
 keepassxc &
-#(sleep 5 && gajim) &
 gajim &
+#urxvt -name ssh-add -e ssh-add ~/.ssh/id_rsa &
+#(sleep 5 && gajim) &
 exec i3
