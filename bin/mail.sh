@@ -11,5 +11,5 @@ inotifywait -e create,moved_to -q -r --monitor ~/.Mail/*/*/new | while read line
   from=$(egrep '^From: ' $mail_file | ${BIN_HOME}/utf-header.py)
   to=$(egrep '^To: ' $mail_file | ${BIN_HOME}/utf-header.py)
   subject=$(egrep '^Subject: ' $mail_file | ${BIN_HOME}/utf-header.py)
-  notify-send -t 1500 -a "OfflineIMAP (${account})" "$from<br />$to<br />$subject"
+  notify-send -t 3000 -a "OfflineIMAP (${account})" "$from<br />$to<br />$subject"
 done
