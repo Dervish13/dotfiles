@@ -20,9 +20,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 # lock screen
-bindsym Control+Delete exec i3lock  -t  -i /home/r/Documents/bg.png
+bindsym Control+Delete exec i3lock -c 000000 -u -i /home/r/Documents/Rinverted.png
 
-exec --no-startup-id feh --bg-scale /home/r/Documents/bg.png
+exec --no-startup-id feh --bg-center /home/r/Documents/Rinverted.png
 # Use mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

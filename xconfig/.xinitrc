@@ -6,7 +6,6 @@
 export PATH="${HOME}/bin:${PATH}"
 export LANG=en_US.UTF-8
 export COLORS=256
-#wmname LG3D
 
 eval $(gpg-agent --daemon)
 eval $(ssh-agent)
@@ -25,6 +24,7 @@ urxvt -name weechat -e ~/bin/weechat.sh &
 offlineimap &
 keepassxc &
 gajim &
+xhost +
 #urxvt -name ssh-add -e ssh-add ~/.ssh/id_rsa &
 #(sleep 5 && gajim) &
 exec i3
