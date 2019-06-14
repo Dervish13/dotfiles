@@ -9,7 +9,6 @@ export COLORS=256
 
 eval $(gpg-agent --daemon)
 eval $(ssh-agent)
-set -xg TERM rxvt-256color
 
 # Start audio before the apps
 mixer -f /dev/mixer1 pcm 100 vol 100 mic 100
