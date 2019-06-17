@@ -6,29 +6,28 @@ let g:spacevim_plug_home = '~/.vim/plugged'
 function! Layers()
 
   " Default layers
+  Layer 'auto-completion'
   Layer 'better-defaults'
   Layer 'c-c++'
   Layer 'code-snippets'
-  Layer 'ctrlp'
   Layer 'editing'
-  " Layer 'file-manager'
+  Layer 'file-manager'
   Layer 'fzf'
-  Layer 'git'
-  Layer 'github'
   Layer 'html'
   Layer 'javascript'
+  Layer 'lsp'
   Layer 'markdown'
   Layer 'programming'
   Layer 'python'
   Layer 'syntax-checking'
-  Layer 'unite'
-  Layer 'ycmd'
+  Layer 'text-align'
+  Layer 'tmux'
+  Layer 'which-key'
 
 endfunction
 
 " Add your own plugins
 function! UserInit()
-
   " The default leader key is space key.
   " Uncomment the line below and modify "<\Space>" if you prefer another
   " let g:spacevim_leader = "<\Space>"
@@ -39,32 +38,15 @@ function! UserInit()
 
   " Install personal plugins
   " Plug 'hecal3/vim-leader-guide'
-  Plug 'scrooloose/nerdtree'
-
 endfunction
 
 " Override the default settings as well as adding extras
 function! UserConfig()
-
-  " If you have installed the powerline fonts and want to enable airline layer
-  " let g:airline_powerline_fonts=1
-
-  " Use gui colors in terminal if available
-  if has('termguicolors')
-    " set termguicolors
-    if g:spacevim_tmux
-      " If use vim inside tmux, see https://github.com/vim/vim/issues/993
-      " set Vim-specific sequences for RGB colors
-      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-    endif
-  endif
-
   autocmd BufWritePre * :%s/\s\+$//e
   let g:UltiSnipsEditSplit="vertical"
-  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:gutentags_ctags_executable = "uctags"
+  let g:spacevim_lsp_engine = 'coc'
+  set cursorcolumn
 
-  noremap <F4> :NERDTreeToggle<CR>
-  inoremap <F4> <ESC>:NERDTreeToggle<CR>
-
+  autocmd FileType make setlocal tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 endfunction
