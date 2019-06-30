@@ -1,7 +1,7 @@
 URxvt.foreground: gray
 URxvt.scrollBar: false
 URxvt.perl-ext: default,matcher
-URxvt.url-launcher: browser.sh
+URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
 URxvt.visualBell: true
 URxvt.urgentOnBell:  true
@@ -9,6 +9,8 @@ URxvt.matcher.pattern.1:  \\bhttp(\|s)\://\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 URxvt.matcher.pattern.2:  \\B(/\\S+?):(\\d+)(?=:|$)
 URxvt.matcher.launcher.2: vim +$2 $1
 ! URxvt*.font: xft:Monospace:*:size=20
+URxvt*.transparent: true
+URxvt.tintColor: #045720
 
 
 ! Based on Solarized
@@ -66,7 +68,7 @@ URxvt.matcher.launcher.2: vim +$2 $1
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
-! User: meka
+! User: r
 ! ------------------------------------------------------------------------------
 ! Color scheme for normal row
 rofi.color-normal:                   #000000,#505050,#000000,#586e75,#000000

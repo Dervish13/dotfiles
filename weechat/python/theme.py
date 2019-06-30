@@ -54,7 +54,7 @@ except ImportError as e:
     print('Missing package(s) for %s: %s' % (SCRIPT_NAME, e))
     import_other_ok = False
 
-THEME_CONFIG_FILE_NAME = "/home/meka/.weechat/themes/doebi.theme"
+THEME_CONFIG_FILE_NAME = "/home/r/.weechat/themes/doebi.theme"
 
 COLOR_ATTRIBUTES = ('*', '_', '!')
 
