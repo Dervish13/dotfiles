@@ -11,12 +11,13 @@ eval $(gpg-agent --daemon)
 eval $(ssh-agent)
 
 # Start audio before the apps
-mixer -f /dev/mixer1 pcm 100 vol 100 mic 100
+mixer -f /dev/mixer5 pcm 100 vol 100 mic 100
 
 # Keyboard setup
 xset r rate 180 30
 setxkbmap -option "grp:switch" "us,hr"
 xrdb ~/.Xdefaults
+xmodmap ~/.xmodmap
 
 # Apps
 urxvt -name weechat -e ~/bin/weechat.sh &
@@ -24,7 +25,6 @@ urxvt -name weechat -e ~/bin/weechat.sh &
 offlineimap &
 keepassxc &
 gajim &
-xhost +
 #urxvt -name ssh-add -e ssh-add ~/.ssh/id_rsa &
 #(sleep 5 && gajim) &
 exec i3
